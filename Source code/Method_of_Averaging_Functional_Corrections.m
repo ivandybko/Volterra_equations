@@ -1,3 +1,4 @@
+
 function [x_grid, y_final] = Method_of_Averaging_Functional_Corrections(K, phi, a, b, h, max_iter, tol)
     % Решение интегрального уравнения Вольтерра второго рода
     % a, b - границы интервала [a, b]
@@ -20,7 +21,14 @@ function [x_grid, y_final] = Method_of_Averaging_Functional_Corrections(K, phi, 
 
     % Начальная поправка
     delta_prev = zeros(1, N); 
-
+    a_prev=integral(phi,a,a+h)/(h*D);
+    for i = 1:N
+            px = x_grid(i);
+            integrand = @(xi) K(px, xi);
+            inty1 = integral(integrand, a, px, 'ArrayValued',true);
+            y_prev(i) = y_prev(i) + a_prev*inty1;
+            delta_prev(i) = y_prev(i);
+    end
     % Интегрированное ядро K1(x)
     K1 = @(x) arrayfun(@(x_val) integral(@(xi) K(x_val, xi), a, a+h,'ArrayValued',true), x);
 
