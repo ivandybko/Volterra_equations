@@ -1,6 +1,6 @@
 # Numerical and Analytical Solutions for Volterra Integral Equations
 
-This repository contains the implementations of analytical and numerical methods for solving **linear Volterra integral equations of the second kind**. These methods were developed and tested as part of a research project. The repository includes both mathematical formulations and their software implementations, highlighting practical applications and comparative performance analysis.
+This repository contains the implementations of analytical and numerical methods for solving **linear Volterra integral equations of the second kind**. These methods were developed and tested as part of a research project. The repository includes both mathematical formulations and their software implementations, highlighting practical applications and comparative performance analysis. All results are documented in a detailed [report](https://github.com/ivandybko/Volterra_equations/blob/ca0ab5e386d1dfe11d4cbcb67ef982a46405c7e5/Report.pdf) or summarized in a concise [presentation](https://github.com/ivandybko/Volterra_equations/blob/ca0ab5e386d1dfe11d4cbcb67ef982a46405c7e5/Presentation.pdf) for easy reference.
 
 ## Overview
 
@@ -16,8 +16,8 @@ where:
 ## Features
 
 - **Analytical Methods**:
-  - Conversion to equivalent differential equations for degenerate kernels of form $` K(x,t) = \varphi(x) + \psi(x)(x-t)`$.
-  - Solution method based on the Laplace transform for difference kernels $`$K(x,t)=K(x-t)$`$.
+  - Conversion to equivalent differential equations for degenerate kernels of form $` K(x,t) = \varphi(x) + \psi(x)(x-t)`$. [Wolfram Mathematica Notebook](https://github.com/ivandybko/Volterra_equations/blob/ca0ab5e386d1dfe11d4cbcb67ef982a46405c7e5/Source%20code/Equations%20with%20Kernel%20of%20the%20Form%20K(x%2Ct)%3D%CF%86(x)%2B%CF%88(x)(x%E2%88%92t).nb).
+  - Solution method based on the Laplace transform for difference kernels $`$K(x,t)=K(x-t)$`$. [Wolfram Mathematica Notebook](https://github.com/ivandybko/Volterra_equations/blob/ca0ab5e386d1dfe11d4cbcb67ef982a46405c7e5/Source%20code/%20Solution%20Method%20for%20Integral%20Equations%20with%20Difference%20Kernel%20Based%20on%20the%20Laplace%20Transform.nb)
 
 - **Numerical Methods**:
   - [**Quadrature Method**](https://github.com/ivandybko/Volterra_equations/blob/7217e0ebd0f53350ea7a8b5a916c844a651d4382/Source%20code/Quadrature_Method.m): Approximation using algebraic systems derived from quadrature formulas.
@@ -79,5 +79,5 @@ y(x) + \frac{1}{4}  \int_0^x \sqrt{x + 3t} \; y(t) dt = 1 + x \left( 1 + \frac{7
 ### Installation
 Clone the repository:
 ```bash
-git clone https://github.com/yourusername/volterra-solutions.git
-cd volterra-solutions
+git clone https://github.com/ivandybko/Volterra_equations.git
+cd Volterra_equations
