@@ -21,7 +21,7 @@ where:
 
 - **Numerical Methods**:
   - [**Quadrature Method**](https://github.com/ivandybko/Volterra_equations/blob/7217e0ebd0f53350ea7a8b5a916c844a651d4382/Source%20code/Quadrature_Method.m): Approximation using algebraic systems derived from quadrature formulas.
-  - [**Method of Averaged Functional Corrections**](https://github.com/ivandybko/Volterra_equations/blob/7217e0ebd0f53350ea7a8b5a916c844a651d4382/Source%20code/Method_of_Averaging_Functional_Corrections.m): Iterative technique for enhanced accuracy, especially for smooth or singular kernels.
+  - [**Method of Averaging Functional Corrections**](https://github.com/ivandybko/Volterra_equations/blob/7217e0ebd0f53350ea7a8b5a916c844a651d4382/Source%20code/Method_of_Averaging_Functional_Corrections.m): Iterative technique for enhanced accuracy, especially for smooth or singular kernels.
 
 - **Comparison of Methods**:
   - Detailed accuracy analysis across examples with various kernel types and grid configurations.
@@ -33,7 +33,7 @@ The methods were tested on a variety of equations to evaluate:
 2. **Efficiency**: Performance on intervals of varying lengths and grid resolutions.
 
 ### Key Observations
-- The **Method of Averaged Functional Corrections** demonstrated superior accuracy for large intervals and finer grids.
+- The **Method of Averaging Functional Corrections** demonstrated superior accuracy for large intervals and finer grids.
 - The **Quadrature Method** is computationally efficient but less accurate for extended domains.
 
 ## Examples
@@ -45,9 +45,9 @@ y(x) - \int_0^x y(t) \, dt = 1 + \frac{x^2}{2}.
 ```
 - **Analytical solution**: $` y(x) = 2e^x - x - 1 `$.
 - **Observations**:
-  - The method of averaging functional corrections (MOFC) outperforms the quadrature method in terms of accuracy.
+  - The method of averaging functional corrections (MoAFC) outperforms the quadrature method in terms of accuracy.
   - Increasing the interval length to $`[0, 20]`$ results in a noticeable drop in the accuracy of the quadrature method.
-  - While increasing the number of nodes in MOFC increases computational costs, it can also improve the accuracy of the calculations in certain cases.
+  - While increasing the number of nodes in MoAFC increases computational costs, it can also improve the accuracy of the calculations in certain cases.
 
 ### [2. Oscillatory Kernel](https://github.com/ivandybko/Volterra_equations/blob/7217e0ebd0f53350ea7a8b5a916c844a651d4382/Source%20code/Examples/Example2.m)
 **Equation**:
@@ -56,7 +56,7 @@ y(x) - \int_0^x \sin(x - t) y(t) \, dt = \sin(x) + \cos(x).
 ```
 - **Analytical solution**: $` y(x) = x + 1 `$.
 - **Observations**:
-  - The method of averaging functional corrections (MOFC) shows significantly higher accuracy than the quadrature method, especially on long intervals.
+  - The method of averaging functional corrections (MoAFC) shows significantly higher accuracy than the quadrature method, especially on long intervals.
   - Based on the error graph of the MOFC method, the error approaches zero over most of the interval, indicating high precision.
   - Reducing the grid step results in a decrease in the accuracy of the method.
 
